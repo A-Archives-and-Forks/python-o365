@@ -135,7 +135,7 @@ This version may include new features but could be unstable. <strong>Use at your
 </pre></div>
 </div>
 <p>Or with uv, run:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">uv add &quot;o365 @ git+https://github.com/O365/python-o365&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">uv add "o365 @ git+https://github.com/O365/python-o365"</span>
 </pre></div>
 </div>
 </section>
@@ -145,14 +145,14 @@ This version may include new features but could be unstable. <strong>Use at your
 <p>The first step to be able to work with this library is to register an application and retrieve the auth token. See <a class="reference internal" href="#authentication"><span class="std std-ref">Authentication</span></a>.</p>
 <p>With the access token retrieved and stored you will be able to perform api calls to the service.</p>
 <p>A common pattern to check for authentication and use the library is this one:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requested_scopes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;my_required_scopes&#39;</span><span class="p">]</span>  <span class="c1"># you can use scope helpers here (see Permissions and Scopes section)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">requested_scopes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'my_required_scopes'</span><span class="p">]</span>  <span class="c1"># you can use scope helpers here (see Permissions and Scopes section)</span>
 
 <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">account</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>  <span class="c1"># will check if there is a token and has not expired</span>
    <span class="c1"># ask for a login using console based authentication. See Authentication for other flows</span>
    <span class="k">if</span> <span class="n">account</span><span class="o">.</span><span class="n">authenticate</span><span class="p">(</span><span class="n">requested_scopes</span><span class="o">=</span><span class="n">requeated_scopes</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
-      <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">&#39;Authentication Failed&#39;</span><span class="p">)</span>
+      <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">'Authentication Failed'</span><span class="p">)</span>
 
 <span class="c1"># now we are authenticated</span>
 <span class="c1"># use the library from now on</span>
@@ -253,8 +253,8 @@ refresh is done within the 90 days</p></td>
 <p>The Connection Class handles the authentication.</p>
 <p>With auth_flow_type ‘credentials’ you can authenticate using a certificate based authentication by just passing the client_secret like so:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client_secret</span> <span class="o">=</span> <span class="p">{</span>
-   <span class="s2">&quot;thumbprint&quot;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">thumbprint</span> <span class="n">of</span> <span class="n">cert</span> <span class="n">file</span><span class="o">&gt;</span><span class="p">,</span>
-   <span class="s2">&quot;private_key&quot;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">private</span> <span class="n">key</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">private_key_file</span><span class="o">&gt;</span>
+   <span class="s2">"thumbprint"</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">thumbprint</span> <span class="n">of</span> <span class="n">cert</span> <span class="n">file</span><span class="o">&gt;</span><span class="p">,</span>
+   <span class="s2">"private_key"</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">private</span> <span class="n">key</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">private_key_file</span><span class="o">&gt;</span>
 <span class="p">}</span>
 <span class="n">credentials</span> <span class="o">=</span> <span class="n">client_id</span><span class="p">,</span> <span class="n">client_secret</span>
 <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">)</span>
@@ -339,17 +339,17 @@ Finally, you can mix and match “protocol scopes” with “scope helpers”.
 Go to the [procotol section](#protocols) to know more about them.</p>
 <p>For Example (following the previous permissions added):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
-<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;my_client_id&#39;</span><span class="p">,</span> <span class="s1">&#39;my_client_secret&#39;</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'my_client_id'</span><span class="p">,</span> <span class="s1">'my_client_secret'</span><span class="p">)</span>
 
 <span class="c1"># the default protocol will be Microsoft Graph</span>
-<span class="c1"># the default authentication method will be &quot;on behalf of a user&quot;</span>
+<span class="c1"># the default authentication method will be "on behalf of a user"</span>
 
 <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">account</span><span class="o">.</span><span class="n">authenticate</span><span class="p">(</span><span class="n">requested_scopes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;basic&#39;</span><span class="p">,</span> <span class="s1">&#39;message_all&#39;</span><span class="p">]):</span>
-   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Authenticated!&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">account</span><span class="o">.</span><span class="n">authenticate</span><span class="p">(</span><span class="n">requested_scopes</span><span class="o">=</span><span class="p">[</span><span class="s1">'basic'</span><span class="p">,</span> <span class="s1">'message_all'</span><span class="p">]):</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">'Authenticated!'</span><span class="p">)</span>
 
-<span class="c1"># &#39;basic&#39; adds: &#39;https://graph.microsoft.com/User.Read&#39;</span>
-<span class="c1"># &#39;message_all&#39; adds: &#39;https://graph.microsoft.com/Mail.ReadWrite&#39; and &#39;https://graph.microsoft.com/Mail.Send&#39;</span>
+<span class="c1"># 'basic' adds: 'https://graph.microsoft.com/User.Read'</span>
+<span class="c1"># 'message_all' adds: 'https://graph.microsoft.com/Mail.ReadWrite' and 'https://graph.microsoft.com/Mail.Send'</span>
 </pre></div>
 </div>
 <p>When using the “on behalf of the user” authentication method, this method call will print an url that the user must visit to give consent to the app on the required permissions.</p>
@@ -368,13 +368,13 @@ The method will then return True if the login attempt was succesful.</p>
 <div><p>For Example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
 
-<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;my_client_id&#39;</span><span class="p">,</span> <span class="s1">&#39;my_client_secret&#39;</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'my_client_id'</span><span class="p">,</span> <span class="s1">'my_client_secret'</span><span class="p">)</span>
 
 <span class="c1"># the default protocol will be Microsoft Graph</span>
 
-<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">auth_flow_type</span><span class="o">=</span><span class="s1">&#39;credentials&#39;</span><span class="p">,</span> <span class="n">tenant_id</span><span class="o">=</span><span class="s1">&#39;my-tenant-id&#39;</span><span class="p">)</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">auth_flow_type</span><span class="o">=</span><span class="s1">'credentials'</span><span class="p">,</span> <span class="n">tenant_id</span><span class="o">=</span><span class="s1">'my-tenant-id'</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">account</span><span class="o">.</span><span class="n">authenticate</span><span class="p">():</span>
-   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Authenticated!&#39;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">'Authenticated!'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -411,10 +411,10 @@ The authenticate method will print into the console an url that you will have to
 <span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
 
 
-<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/stepone&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">'/stepone'</span><span class="p">)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">auth_step_one</span><span class="p">():</span>
    <span class="c1"># callback = absolute url to auth_step_two_callback() page, https://domain.tld/steptwo</span>
-   <span class="n">callback</span> <span class="o">=</span> <span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;auth_step_two_callback&#39;</span><span class="p">,</span> <span class="n">_external</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Flask example</span>
+   <span class="n">callback</span> <span class="o">=</span> <span class="n">url_for</span><span class="p">(</span><span class="s1">'auth_step_two_callback'</span><span class="p">,</span> <span class="n">_external</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Flask example</span>
 
    <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">)</span>
    <span class="n">url</span><span class="p">,</span> <span class="n">flow</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">con</span><span class="o">.</span><span class="n">get_authorization_url</span><span class="p">(</span><span class="n">requested_scopes</span><span class="o">=</span><span class="n">my_scopes</span><span class="p">,</span>
@@ -426,7 +426,7 @@ The authenticate method will print into the console an url that you will have to
 
    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 
-<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/steptwo&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">'/steptwo'</span><span class="p">)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">auth_step_two_callback</span><span class="p">():</span>
    <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">)</span>
 
@@ -435,18 +435,18 @@ The authenticate method will print into the console an url that you will have to
    <span class="n">my_saved_flow</span> <span class="o">=</span> <span class="n">deserialize</span><span class="p">(</span><span class="n">my_saved_flow_str</span><span class="p">)</span>  <span class="c1"># convert from a string to a dict using json for example.</span>
 
    <span class="c1"># rebuild the redirect_uri used in auth_step_one</span>
-   <span class="n">callback</span> <span class="o">=</span> <span class="s1">&#39;my absolute url to auth_step_two_callback&#39;</span>
+   <span class="n">callback</span> <span class="o">=</span> <span class="s1">'my absolute url to auth_step_two_callback'</span>
 
    <span class="c1"># get the request URL of the page which will include additional auth information</span>
    <span class="c1"># Example request: /steptwo?code=abc123&amp;state=xyz456</span>
-   <span class="n">requested_url</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">url</span>  <span class="c1"># uses Flask&#39;s request() method</span>
+   <span class="n">requested_url</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">url</span>  <span class="c1"># uses Flask's request() method</span>
 
    <span class="n">result</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">con</span><span class="o">.</span><span class="n">request_token</span><span class="p">(</span><span class="n">requested_url</span><span class="p">,</span>
                                        <span class="n">flow</span><span class="o">=</span><span class="n">my_saved_flow</span><span class="p">)</span>
    <span class="c1"># if result is True, then authentication was successful</span>
    <span class="c1">#  and the auth token is stored in the token backend</span>
    <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
-      <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;auth_complete.html&#39;</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'auth_complete.html'</span><span class="p">)</span>
    <span class="c1"># else ....</span>
 </pre></div>
 </div>
@@ -478,9 +478,9 @@ The authenticate method will print into the console an url that you will have to
 <p>For example your application can have Calendar.Read, Mail.ReadWrite and Mail.Send permissions, but the application can request access only to the Mail.ReadWrite and Mail.Send permission. This is done by providing scopes to the Account instance or account.authenticate method like so:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
 
-<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;client_id&#39;</span><span class="p">,</span> <span class="s1">&#39;client_secret&#39;</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'client_id'</span><span class="p">,</span> <span class="s1">'client_secret'</span><span class="p">)</span>
 
-<span class="n">requested_scopes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mail.ReadWrite&#39;</span><span class="p">,</span> <span class="s1">&#39;Mail.Send&#39;</span><span class="p">]</span>
+<span class="n">requested_scopes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Mail.ReadWrite'</span><span class="p">,</span> <span class="s1">'Mail.Send'</span><span class="p">]</span>
 
 <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">requested_scopes</span><span class="o">=</span><span class="n">requested_scopes</span><span class="p">)</span>
 <span class="n">account</span><span class="o">.</span><span class="n">authenticate</span><span class="p">()</span>
@@ -575,8 +575,8 @@ The authenticate method will print into the console an url that you will have to
 <p>You can get the same scopes as before using protocols and scope helpers like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">protocol_graph</span> <span class="o">=</span> <span class="n">MSGraphProtocol</span><span class="p">()</span>
 
-<span class="n">scopes_graph</span> <span class="o">=</span> <span class="n">protocol</span><span class="o">.</span><span class="n">get_scopes_for</span><span class="p">(</span><span class="s1">&#39;message_all&#39;</span><span class="p">)</span>
-<span class="c1"># scopes here are: [&#39;https://graph.microsoft.com/Mail.ReadWrite&#39;, &#39;https://graph.microsoft.com/Mail.Send&#39;]</span>
+<span class="n">scopes_graph</span> <span class="o">=</span> <span class="n">protocol</span><span class="o">.</span><span class="n">get_scopes_for</span><span class="p">(</span><span class="s1">'message_all'</span><span class="p">)</span>
+<span class="c1"># scopes here are: ['https://graph.microsoft.com/Mail.ReadWrite', 'https://graph.microsoft.com/Mail.Send']</span>
 
 <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">requested_scopes</span><span class="o">=</span><span class="n">scopes_graph</span><span class="p">)</span>
 </pre></div>
@@ -621,15 +621,15 @@ The authenticate method will print into the console an url that you will have to
 <p>For example using the FileSystem Token Backend:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span><span class="p">,</span> <span class="n">FileSystemTokenBackend</span>
 
-<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;secret&#39;</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="s1">'secret'</span><span class="p">)</span>
 
-<span class="c1"># this will store the token under: &quot;my_project_folder/my_folder/my_token.txt&quot;.</span>
+<span class="c1"># this will store the token under: "my_project_folder/my_folder/my_token.txt".</span>
 <span class="c1"># you can pass strings to token_path or Path instances from pathlib</span>
-<span class="n">token_backend</span> <span class="o">=</span> <span class="n">FileSystemTokenBackend</span><span class="p">(</span><span class="n">token_path</span><span class="o">=</span><span class="s1">&#39;my_folder&#39;</span><span class="p">,</span> <span class="n">token_filename</span><span class="o">=</span><span class="s1">&#39;my_token.txt&#39;</span><span class="p">)</span>
+<span class="n">token_backend</span> <span class="o">=</span> <span class="n">FileSystemTokenBackend</span><span class="p">(</span><span class="n">token_path</span><span class="o">=</span><span class="s1">'my_folder'</span><span class="p">,</span> <span class="n">token_filename</span><span class="o">=</span><span class="s1">'my_token.txt'</span><span class="p">)</span>
 <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">token_backend</span><span class="o">=</span><span class="n">token_backend</span><span class="p">)</span>
 
 <span class="c1"># This account instance tokens will be stored on the token_backend configured before.</span>
-<span class="c1"># You don&#39;t have to do anything more</span>
+<span class="c1"># You don't have to do anything more</span>
 <span class="c1"># ...</span>
 </pre></div>
 </div>
@@ -638,17 +638,17 @@ The authenticate method will print into the console an url that you will have to
 <span class="kn">from</span><span class="w"> </span><span class="nn">O365.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">FirestoreBackend</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">google.cloud</span><span class="w"> </span><span class="kn">import</span> <span class="n">firestore</span>
 
-<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;secret&#39;</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'id'</span><span class="p">,</span> <span class="s1">'secret'</span><span class="p">)</span>
 
 <span class="c1"># this will store the token on firestore under the tokens collection on the defined doc_id.</span>
 <span class="c1"># you can pass strings to token_path or Path instances from pathlib</span>
-<span class="n">user_id</span> <span class="o">=</span> <span class="s1">&#39;whatever the user id is&#39;</span>  <span class="c1"># used to create the token document id</span>
-<span class="n">document_id</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;token_</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">&quot;</span>  <span class="c1"># used to uniquely store this token</span>
-<span class="n">token_backend</span> <span class="o">=</span> <span class="n">FirestoreBackend</span><span class="p">(</span><span class="n">client</span><span class="o">=</span><span class="n">firestore</span><span class="o">.</span><span class="n">Client</span><span class="p">(),</span> <span class="n">collection</span><span class="o">=</span><span class="s1">&#39;tokens&#39;</span><span class="p">,</span> <span class="n">doc_id</span><span class="o">=</span><span class="n">document_id</span><span class="p">)</span>
+<span class="n">user_id</span> <span class="o">=</span> <span class="s1">'whatever the user id is'</span>  <span class="c1"># used to create the token document id</span>
+<span class="n">document_id</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"token_</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">"</span>  <span class="c1"># used to uniquely store this token</span>
+<span class="n">token_backend</span> <span class="o">=</span> <span class="n">FirestoreBackend</span><span class="p">(</span><span class="n">client</span><span class="o">=</span><span class="n">firestore</span><span class="o">.</span><span class="n">Client</span><span class="p">(),</span> <span class="n">collection</span><span class="o">=</span><span class="s1">'tokens'</span><span class="p">,</span> <span class="n">doc_id</span><span class="o">=</span><span class="n">document_id</span><span class="p">)</span>
 <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">token_backend</span><span class="o">=</span><span class="n">token_backend</span><span class="p">)</span>
 
 <span class="c1"># This account instance tokens will be stored on the token_backend configured before.</span>
-<span class="c1"># You don&#39;t have to do anything more</span>
+<span class="c1"># You don't have to do anything more</span>
 <span class="c1"># ...</span>
 </pre></div>
 </div>

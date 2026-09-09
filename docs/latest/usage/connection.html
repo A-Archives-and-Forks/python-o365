@@ -108,18 +108,18 @@
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
 
-<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;client_id&#39;</span><span class="p">,</span> <span class="s1">&#39;client_secret&#39;</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'client_id'</span><span class="p">,</span> <span class="s1">'client_secret'</span><span class="p">)</span>
 
-<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">auth_flow_type</span><span class="o">=</span><span class="s1">&#39;credentials&#39;</span><span class="p">,</span> <span class="n">tenant_id</span><span class="o">=</span><span class="s1">&#39;my_tenant_id&#39;</span><span class="p">)</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">auth_flow_type</span><span class="o">=</span><span class="s1">'credentials'</span><span class="p">,</span> <span class="n">tenant_id</span><span class="o">=</span><span class="s1">'my_tenant_id'</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">account</span><span class="o">.</span><span class="n">authenticate</span><span class="p">():</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Authenticated!&#39;</span><span class="p">)</span>
-<span class="n">mailbox</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">mailbox</span><span class="p">(</span><span class="s1">&#39;sender_email@my_domain.com&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Authenticated!'</span><span class="p">)</span>
+<span class="n">mailbox</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">mailbox</span><span class="p">(</span><span class="s1">'sender_email@my_domain.com'</span><span class="p">)</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">mailbox</span><span class="o">.</span><span class="n">new_message</span><span class="p">()</span>
-<span class="n">m</span><span class="o">.</span><span class="n">to</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;to_example@example.com&#39;</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">subject</span> <span class="o">=</span> <span class="s1">&#39;Testing!&#39;</span>
-<span class="n">m</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="s2">&quot;George Best quote: I&#39;ve stopped drinking, but only while I&#39;m asleep.&quot;</span>
+<span class="n">m</span><span class="o">.</span><span class="n">to</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">'to_example@example.com'</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">subject</span> <span class="o">=</span> <span class="s1">'Testing!'</span>
+<span class="n">m</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="s2">"George Best quote: I've stopped drinking, but only while I'm asleep."</span>
 <span class="n">m</span><span class="o">.</span><span class="n">save_message</span><span class="p">()</span>
-<span class="n">m</span><span class="o">.</span><span class="n">attachment</span><span class="o">.</span><span class="n">add</span> <span class="o">=</span> <span class="s1">&#39;filename.txt&#39;</span>
+<span class="n">m</span><span class="o">.</span><span class="n">attachment</span><span class="o">.</span><span class="n">add</span> <span class="o">=</span> <span class="s1">'filename.txt'</span>
 <span class="n">m</span><span class="o">.</span><span class="n">send</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -131,7 +131,7 @@
 <span class="c1"># ...</span>
 
 <span class="c1"># try the api version beta of the Microsoft Graph endpoint.</span>
-<span class="n">protocol</span> <span class="o">=</span> <span class="n">MSGraphProtocol</span><span class="p">(</span><span class="n">api_version</span><span class="o">=</span><span class="s1">&#39;beta&#39;</span><span class="p">)</span>  <span class="c1"># MSGraphProtocol defaults to v1.0 api version</span>
+<span class="n">protocol</span> <span class="o">=</span> <span class="n">MSGraphProtocol</span><span class="p">(</span><span class="n">api_version</span><span class="o">=</span><span class="s1">'beta'</span><span class="p">)</span>  <span class="c1"># MSGraphProtocol defaults to v1.0 api version</span>
 <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">protocol</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -145,13 +145,13 @@
 </div>
 <p>For example when accessing a shared mailbox:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
-<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="o">=</span><span class="n">my_credentials</span><span class="p">,</span> <span class="n">main_resource</span><span class="o">=</span><span class="s1">&#39;shared_mailbox@example.com&#39;</span><span class="p">)</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="o">=</span><span class="n">my_credentials</span><span class="p">,</span> <span class="n">main_resource</span><span class="o">=</span><span class="s1">'shared_mailbox@example.com'</span><span class="p">)</span>
 <span class="c1"># Any instance created using account will inherit the resource defined for account.</span>
 </pre></div>
 </div>
 <p>This can be done however at any point. For example at the protocol level:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
-<span class="n">protocol</span> <span class="o">=</span> <span class="n">MSGraphProtocol</span><span class="p">(</span><span class="n">default_resource</span><span class="o">=</span><span class="s1">&#39;shared_mailbox@example.com&#39;</span><span class="p">)</span>
+<span class="n">protocol</span> <span class="o">=</span> <span class="n">MSGraphProtocol</span><span class="p">(</span><span class="n">default_resource</span><span class="o">=</span><span class="s1">'shared_mailbox@example.com'</span><span class="p">)</span>
 
 <span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="o">=</span><span class="n">my_credentials</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">protocol</span><span class="p">)</span>
 
@@ -161,13 +161,13 @@
 </div>
 <p>Instead of defining the resource used at the account or protocol level, you can provide it per use case as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
-<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="o">=</span><span class="n">my_credentials</span><span class="p">)</span>  <span class="c1"># account defaults to &#39;ME&#39; resource</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">(</span><span class="n">credentials</span><span class="o">=</span><span class="n">my_credentials</span><span class="p">)</span>  <span class="c1"># account defaults to 'ME' resource</span>
 
-<span class="n">mailbox</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">mailbox</span><span class="p">(</span><span class="s1">&#39;shared_mailbox@example.com&#39;</span><span class="p">)</span>  <span class="c1"># mailbox is using &#39;shared_mailbox@example.com&#39; resource instead of &#39;ME&#39;</span>
+<span class="n">mailbox</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">mailbox</span><span class="p">(</span><span class="s1">'shared_mailbox@example.com'</span><span class="p">)</span>  <span class="c1"># mailbox is using 'shared_mailbox@example.com' resource instead of 'ME'</span>
 
 <span class="c1"># or:</span>
 
-<span class="n">message</span> <span class="o">=</span> <span class="n">Message</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">account</span><span class="p">,</span> <span class="n">main_resource</span><span class="o">=</span><span class="s1">&#39;shared_mailbox@example.com&#39;</span><span class="p">)</span>  <span class="c1"># message is using &#39;shared_mailbox@example.com&#39; resource</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">Message</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="n">account</span><span class="p">,</span> <span class="n">main_resource</span><span class="o">=</span><span class="s1">'shared_mailbox@example.com'</span><span class="p">)</span>  <span class="c1"># message is using 'shared_mailbox@example.com' resource</span>
 </pre></div>
 </div>
 <p>Usually you will work with the default ‘ME’ resource, but you can also use one of the following:</p>

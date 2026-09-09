@@ -120,18 +120,18 @@
 <p>Assuming an authenticated account and a previously created group, create a Plan instance.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create a plan instance</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
-<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">&#39;app_id&#39;</span><span class="p">,</span> <span class="s1">&#39;app_pw&#39;</span><span class="p">))</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">'app_id'</span><span class="p">,</span> <span class="s1">'app_pw'</span><span class="p">))</span>
 <span class="n">groups</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
 
 <span class="c1"># To retrieve the list of groups</span>
 <span class="n">group_list</span> <span class="o">=</span> <span class="n">groups</span><span class="o">.</span><span class="n">list_groups</span><span class="p">()</span>
 
 <span class="c1"># Or to retrieve a list of groups for a given user</span>
-<span class="n">user_groups</span> <span class="o">=</span> <span class="n">groups</span><span class="o">.</span><span class="n">get_user_groups</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="s2">&quot;object_id&quot;</span><span class="p">)</span>
+<span class="n">user_groups</span> <span class="o">=</span> <span class="n">groups</span><span class="o">.</span><span class="n">get_user_groups</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="s2">"object_id"</span><span class="p">)</span>
 
 <span class="c1"># To retrieve a group by an identifier</span>
-<span class="n">group</span> <span class="o">=</span> <span class="n">groups</span><span class="o">.</span><span class="n">get_group_by_id</span><span class="p">(</span><span class="n">group_id</span><span class="o">=</span><span class="s2">&quot;object_id&quot;</span><span class="p">)</span>
-<span class="n">group</span> <span class="o">=</span> <span class="n">groups</span><span class="o">.</span><span class="n">get_group_by_mail</span><span class="p">(</span><span class="n">group_mail</span><span class="o">=</span><span class="s2">&quot;john@doe.com&quot;</span><span class="p">)</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">groups</span><span class="o">.</span><span class="n">get_group_by_id</span><span class="p">(</span><span class="n">group_id</span><span class="o">=</span><span class="s2">"object_id"</span><span class="p">)</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">groups</span><span class="o">.</span><span class="n">get_group_by_mail</span><span class="p">(</span><span class="n">group_mail</span><span class="o">=</span><span class="s2">"john@doe.com"</span><span class="p">)</span>
 
 
 <span class="c1"># To retrieve the owners and members of a group</span>

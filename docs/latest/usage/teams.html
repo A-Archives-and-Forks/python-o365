@@ -161,48 +161,48 @@
 <section id="presence">
 <h2>Presence<a class="headerlink" href="#presence" title="Link to this heading"></a></h2>
 <p>Assuming an authenticated account.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve logged-in user&#39;s presence</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve logged-in user's presence</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
-<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">&#39;app_id&#39;</span><span class="p">,</span> <span class="s1">&#39;app_pw&#39;</span><span class="p">))</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">'app_id'</span><span class="p">,</span> <span class="s1">'app_pw'</span><span class="p">))</span>
 <span class="n">teams</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">teams</span><span class="p">()</span>
 <span class="n">presence</span> <span class="o">=</span> <span class="n">teams</span><span class="o">.</span><span class="n">get_my_presence</span><span class="p">()</span>
 
-<span class="c1"># Retrieve another user&#39;s presence</span>
-<span class="n">user</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">directory</span><span class="p">()</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="s2">&quot;john@doe.com&quot;</span><span class="p">)</span>
+<span class="c1"># Retrieve another user's presence</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">directory</span><span class="p">()</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="s2">"john@doe.com"</span><span class="p">)</span>
 <span class="n">presence2</span> <span class="o">=</span> <span class="n">teams</span><span class="o">.</span><span class="n">get_user_presence</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">object_id</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To set a users status or preferred status:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set user&#39;s presence</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set user's presence</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">O365.teams</span><span class="w"> </span><span class="kn">import</span> <span class="n">Activity</span><span class="p">,</span> <span class="n">Availability</span><span class="p">,</span> <span class="n">PreferredActivity</span><span class="p">,</span> <span class="n">PreferredAvailability</span>
 
-<span class="n">status</span> <span class="o">=</span> <span class="n">teams</span><span class="o">.</span><span class="n">set_my_presence</span><span class="p">(</span><span class="n">CLIENT_ID</span><span class="p">,</span> <span class="n">Availability</span><span class="o">.</span><span class="n">BUSY</span><span class="p">,</span> <span class="n">Activity</span><span class="o">.</span><span class="n">INACALL</span><span class="p">,</span> <span class="s2">&quot;1H&quot;</span><span class="p">)</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">teams</span><span class="o">.</span><span class="n">set_my_presence</span><span class="p">(</span><span class="n">CLIENT_ID</span><span class="p">,</span> <span class="n">Availability</span><span class="o">.</span><span class="n">BUSY</span><span class="p">,</span> <span class="n">Activity</span><span class="o">.</span><span class="n">INACALL</span><span class="p">,</span> <span class="s2">"1H"</span><span class="p">)</span>
 
-<span class="c1"># or set User&#39;s preferred presence (which is more likely the one you want)</span>
+<span class="c1"># or set User's preferred presence (which is more likely the one you want)</span>
 
-<span class="n">status</span> <span class="o">=</span> <span class="n">teams</span><span class="o">.</span><span class="n">set_my_user_preferred_presence</span><span class="p">(</span><span class="n">PreferredAvailability</span><span class="o">.</span><span class="n">OFFLINE</span><span class="p">,</span> <span class="n">PreferredActivity</span><span class="o">.</span><span class="n">OFFWORK</span><span class="p">,</span> <span class="s2">&quot;1H&quot;</span><span class="p">)</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">teams</span><span class="o">.</span><span class="n">set_my_user_preferred_presence</span><span class="p">(</span><span class="n">PreferredAvailability</span><span class="o">.</span><span class="n">OFFLINE</span><span class="p">,</span> <span class="n">PreferredActivity</span><span class="o">.</span><span class="n">OFFWORK</span><span class="p">,</span> <span class="s2">"1H"</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="chat">
 <h2>Chat<a class="headerlink" href="#chat" title="Link to this heading"></a></h2>
 <p>Assuming an authenticated account.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve logged-in user&#39;s chats</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve logged-in user's chats</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
-<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">&#39;app_id&#39;</span><span class="p">,</span> <span class="s1">&#39;app_pw&#39;</span><span class="p">))</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">'app_id'</span><span class="p">,</span> <span class="s1">'app_pw'</span><span class="p">))</span>
 <span class="n">teams</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">teams</span><span class="p">()</span>
 <span class="n">chats</span> <span class="o">=</span> <span class="n">teams</span><span class="o">.</span><span class="n">get_my_chats</span><span class="p">()</span>
 
 <span class="c1"># Then to retrieve chat messages and chat members</span>
 <span class="k">for</span> <span class="n">chat</span> <span class="ow">in</span> <span class="n">chats</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">chat</span><span class="o">.</span><span class="n">chat_type</span> <span class="o">!=</span> <span class="s2">&quot;unknownFutureValue&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">chat</span><span class="o">.</span><span class="n">chat_type</span> <span class="o">!=</span> <span class="s2">"unknownFutureValue"</span><span class="p">:</span>
         <span class="n">message</span> <span class="o">=</span> <span class="n">chat</span><span class="o">.</span><span class="n">get_messages</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
         <span class="n">memberlist</span> <span class="o">=</span> <span class="n">chat</span><span class="o">.</span><span class="n">get_members</span><span class="p">()</span>
 
 
 <span class="c1"># And to send a chat message</span>
 
-<span class="n">chat</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">content</span><span class="o">=</span><span class="s2">&quot;Hello team!&quot;</span><span class="p">,</span> <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
+<span class="n">chat</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">content</span><span class="o">=</span><span class="s2">"Hello team!"</span><span class="p">,</span> <span class="n">content_type</span><span class="o">=</span><span class="s2">"text"</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -212,9 +212,9 @@
 <section id="team">
 <h2>Team<a class="headerlink" href="#team" title="Link to this heading"></a></h2>
 <p>Assuming an authenticated account.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve logged-in user&#39;s teams</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve logged-in user's teams</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
-<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">&#39;app_id&#39;</span><span class="p">,</span> <span class="s1">&#39;app_pw&#39;</span><span class="p">))</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">'app_id'</span><span class="p">,</span> <span class="s1">'app_pw'</span><span class="p">))</span>
 <span class="n">teams</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">teams</span><span class="p">()</span>
 <span class="n">my_teams</span> <span class="o">=</span> <span class="n">teams</span><span class="o">.</span><span class="n">get_my_teams</span><span class="p">()</span>
 
@@ -228,10 +228,10 @@
 
 
 <span class="c1"># To send a message to a team channel</span>
-<span class="n">channel</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello team&quot;</span><span class="p">)</span>
+<span class="n">channel</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">"Hello team"</span><span class="p">)</span>
 
 <span class="c1"># To send a reply to a message</span>
-<span class="n">channelmessage</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">&quot;Hello team leader&quot;</span><span class="p">)</span>
+<span class="n">channelmessage</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span><span class="s2">"Hello team leader"</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="line-block">

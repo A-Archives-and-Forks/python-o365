@@ -131,7 +131,7 @@
 <span class="c1">#list current tasks</span>
 <span class="n">folder</span> <span class="o">=</span> <span class="n">todo</span><span class="o">.</span><span class="n">get_default_folder</span><span class="p">()</span>
 <span class="n">new_task</span> <span class="o">=</span> <span class="n">folder</span><span class="o">.</span><span class="n">new_task</span><span class="p">()</span>  <span class="c1"># creates a new unsaved task</span>
-<span class="n">new_task</span><span class="o">.</span><span class="n">subject</span> <span class="o">=</span> <span class="s1">&#39;Send contract to George Best&#39;</span>
+<span class="n">new_task</span><span class="o">.</span><span class="n">subject</span> <span class="o">=</span> <span class="s1">'Send contract to George Best'</span>
 <span class="n">new_task</span><span class="o">.</span><span class="n">due</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
 <span class="n">new_task</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
 
@@ -147,18 +147,18 @@
 </div>
 <p>Working with Folder instances:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#create a new folder</span>
-<span class="n">new_folder</span> <span class="o">=</span> <span class="n">todo</span><span class="o">.</span><span class="n">new_folder</span><span class="p">(</span><span class="s1">&#39;Defenders&#39;</span><span class="p">)</span>
+<span class="n">new_folder</span> <span class="o">=</span> <span class="n">todo</span><span class="o">.</span><span class="n">new_folder</span><span class="p">(</span><span class="s1">'Defenders'</span><span class="p">)</span>
 
 <span class="c1">#rename a folder</span>
-<span class="n">folder</span> <span class="o">=</span> <span class="n">todo</span><span class="o">.</span><span class="n">get_folder</span><span class="p">(</span><span class="n">folder_name</span><span class="o">=</span><span class="s1">&#39;Strikers&#39;</span><span class="p">)</span>
-<span class="n">folder</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Forwards&#39;</span>
+<span class="n">folder</span> <span class="o">=</span> <span class="n">todo</span><span class="o">.</span><span class="n">get_folder</span><span class="p">(</span><span class="n">folder_name</span><span class="o">=</span><span class="s1">'Strikers'</span><span class="p">)</span>
+<span class="n">folder</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'Forwards'</span>
 <span class="n">folder</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 
 <span class="c1">#list current tasks</span>
 <span class="n">task_list</span> <span class="o">=</span> <span class="n">folder</span><span class="o">.</span><span class="n">get_tasks</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="n">task_list</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">task</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

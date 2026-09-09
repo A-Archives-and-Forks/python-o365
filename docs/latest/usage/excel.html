@@ -114,8 +114,8 @@
 <span class="c1"># given a File instance that is a xlsx file ...</span>
 <span class="n">excel_file</span> <span class="o">=</span> <span class="n">WorkBook</span><span class="p">(</span><span class="n">my_file_instance</span><span class="p">)</span>  <span class="c1"># my_file_instance should be an instance of File.</span>
 
-<span class="n">ws</span> <span class="o">=</span> <span class="n">excel_file</span><span class="o">.</span><span class="n">get_worksheet</span><span class="p">(</span><span class="s1">&#39;my_worksheet&#39;</span><span class="p">)</span>
-<span class="n">cella1</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_range</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">)</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">excel_file</span><span class="o">.</span><span class="n">get_worksheet</span><span class="p">(</span><span class="s1">'my_worksheet'</span><span class="p">)</span>
+<span class="n">cella1</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_range</span><span class="p">(</span><span class="s1">'A1'</span><span class="p">)</span>
 <span class="n">cella1</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="mi">35</span>
 <span class="n">cella1</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </pre></div>
@@ -142,18 +142,18 @@
 <p>Some examples:</p>
 <p>Set format for a given range</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
-<span class="n">my_range</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_range</span><span class="p">(</span><span class="s1">&#39;B2:C10&#39;</span><span class="p">)</span>
+<span class="n">my_range</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_range</span><span class="p">(</span><span class="s1">'B2:C10'</span><span class="p">)</span>
 <span class="n">fmt</span> <span class="o">=</span> <span class="n">myrange</span><span class="o">.</span><span class="n">get_format</span><span class="p">()</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">bold</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">fmt</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Autofit Columns:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ws</span><span class="o">.</span><span class="n">get_range</span><span class="p">(</span><span class="s1">&#39;B2:C10&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_format</span><span class="p">()</span><span class="o">.</span><span class="n">auto_fit_columns</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ws</span><span class="o">.</span><span class="n">get_range</span><span class="p">(</span><span class="s1">'B2:C10'</span><span class="p">)</span><span class="o">.</span><span class="n">get_format</span><span class="p">()</span><span class="o">.</span><span class="n">auto_fit_columns</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Get values from Table:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_table</span><span class="p">(</span><span class="s1">&#39;my_table&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_table</span><span class="p">(</span><span class="s1">'my_table'</span><span class="p">)</span>
 <span class="n">column</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">get_column_at_index</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">values</span> <span class="o">=</span> <span class="n">column</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># values returns a two-dimensional array.</span>
 </pre></div>

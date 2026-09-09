@@ -233,6 +233,12 @@
 </li>
         <li><a href="api/tasks.html#O365.tasks.Folder.__init__">(O365.tasks.Folder method)</a>
 </li>
+        <li><a href="api/tasks.html#O365.tasks.Pattern.__init__">(O365.tasks.Pattern method)</a>
+</li>
+        <li><a href="api/tasks.html#O365.tasks.Range.__init__">(O365.tasks.Range method)</a>
+</li>
+        <li><a href="api/tasks.html#O365.tasks.Recurrence.__init__">(O365.tasks.Recurrence method)</a>
+</li>
         <li><a href="api/tasks.html#O365.tasks.Task.__init__">(O365.tasks.Task method)</a>
 </li>
         <li><a href="api/tasks.html#O365.tasks.ToDo.__init__">(O365.tasks.ToDo method)</a>
@@ -325,6 +331,10 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/directory.html#O365.directory.User.about_me">about_me (O365.directory.User attribute)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.RecurrencePatternType.ABSOLUTEMONTHLY">ABSOLUTEMONTHLY (O365.tasks.RecurrencePatternType attribute)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.RecurrencePatternType.ABSOLUTEYEARLY">ABSOLUTEYEARLY (O365.tasks.RecurrencePatternType attribute)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.Event.accept_event">accept_event() (O365.calendar.Event method)</a>
 </li>
@@ -426,10 +436,10 @@
 </li>
       <li><a href="api/utils/utils.html#O365.utils.utils.OutlookWellKnowFolderNames.ARCHIVE">ARCHIVE (O365.utils.utils.OutlookWellKnowFolderNames attribute)</a>
 </li>
-      <li><a href="api/mailbox.html#O365.mailbox.MailBox.archive_folder">archive_folder() (O365.mailbox.MailBox method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/mailbox.html#O365.mailbox.MailBox.archive_folder">archive_folder() (O365.mailbox.MailBox method)</a>
+</li>
       <li><a href="api/utils/query.html#O365.utils.query.CompositeFilter.as_params">as_params() (O365.utils.query.CompositeFilter method)</a>
 
       <ul>
@@ -968,6 +978,8 @@
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/tasks.html#O365.tasks.RecurrencePatternType.DAILY">DAILY (O365.tasks.RecurrencePatternType attribute)</a>
+</li>
       <li><a href="api/calendar.html#O365.calendar.DailyEventFrequency">DailyEventFrequency (class in O365.calendar)</a>
 </li>
       <li><a href="api/category.html#O365.category.CategoryColor.DARKBLUE">DARKBLUE (O365.category.CategoryColor attribute)</a>
@@ -999,9 +1011,17 @@
       <li><a href="api/excel.html#O365.excel.NamedRange.data_type">data_type (O365.excel.NamedRange attribute)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.EventRecurrence.day_of_month">day_of_month (O365.calendar.EventRecurrence property)</a>
+
+      <ul>
+        <li><a href="api/tasks.html#O365.tasks.Pattern.day_of_month">(O365.tasks.Pattern property)</a>
 </li>
+      </ul></li>
       <li><a href="api/calendar.html#O365.calendar.EventRecurrence.days_of_week">days_of_week (O365.calendar.EventRecurrence property)</a>
+
+      <ul>
+        <li><a href="api/tasks.html#O365.tasks.Pattern.days_of_week">(O365.tasks.Pattern property)</a>
 </li>
+      </ul></li>
       <li><a href="api/calendar.html#O365.calendar.Event.decline_event">decline_event() (O365.calendar.Event method)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.EventResponse.Declined">Declined (O365.calendar.EventResponse attribute)</a>
@@ -1227,6 +1247,12 @@
       <li><a href="api/calendar.html#O365.calendar.Event.end">end (O365.calendar.Event property)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.EventRecurrence.end_date">end_date (O365.calendar.EventRecurrence property)</a>
+
+      <ul>
+        <li><a href="api/tasks.html#O365.tasks.Range.end_date">(O365.tasks.Range property)</a>
+</li>
+      </ul></li>
+      <li><a href="api/tasks.html#O365.tasks.RecurrenceRangeType.ENDDATE">ENDDATE (O365.tasks.RecurrenceRangeType attribute)</a>
 </li>
       <li><a href="api/utils/query.html#O365.utils.query.QueryBuilder.endswith">endswith() (O365.utils.query.QueryBuilder method)</a>
 
@@ -1250,10 +1276,10 @@
 </li>
       <li><a href="api/calendar.html#O365.calendar.EventAttachment">EventAttachment (class in O365.calendar)</a>
 </li>
-      <li><a href="api/calendar.html#O365.calendar.EventAttachments">EventAttachments (class in O365.calendar)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/calendar.html#O365.calendar.EventAttachments">EventAttachments (class in O365.calendar)</a>
+</li>
       <li><a href="api/calendar.html#O365.calendar.EventRecurrence">EventRecurrence (class in O365.calendar)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.EventResponse">EventResponse (class in O365.calendar)</a>
@@ -1316,6 +1342,10 @@
 </li>
       <li><a href="api/utils/token.html#O365.utils.token.FirestoreBackend">FirestoreBackend (class in O365.utils.token)</a>
 </li>
+      <li><a href="api/tasks.html#O365.tasks.WeekIndex.FIRST">FIRST (O365.tasks.WeekIndex attribute)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.Pattern.first_day_of_the_week">first_day_of_the_week (O365.tasks.Pattern property)</a>
+</li>
       <li><a href="api/calendar.html#O365.calendar.EventRecurrence.first_day_of_week">first_day_of_week (O365.calendar.EventRecurrence property)</a>
 </li>
       <li><a href="api/message.html#O365.message.Flag">Flag (class in O365.message)</a>
@@ -1363,6 +1393,8 @@
       <li><a href="api/excel.html#O365.excel.Range.formulas_r1_c1">formulas_r1_c1 (O365.excel.Range property)</a>
 </li>
       <li><a href="api/message.html#O365.message.Message.forward">forward() (O365.message.Message method)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.WeekIndex.FOURTH">FOURTH (O365.tasks.WeekIndex attribute)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.EventShowAs.Free">Free (O365.calendar.EventShowAs attribute)</a>
 </li>
@@ -1961,6 +1993,8 @@
 </li>
         <li><a href="api/excel.html#O365.excel.TableRow.index">(O365.excel.TableRow attribute)</a>
 </li>
+        <li><a href="api/tasks.html#O365.tasks.Pattern.index">(O365.tasks.Pattern property)</a>
+</li>
       </ul></li>
       <li><a href="api/sharepoint.html#O365.sharepoint.SharepointListColumn.indexed">indexed (O365.sharepoint.SharepointListColumn attribute)</a>
 </li>
@@ -1979,7 +2013,11 @@
       <li><a href="api/message.html#O365.message.Message.internet_message_id">internet_message_id (O365.message.Message attribute)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.EventRecurrence.interval">interval (O365.calendar.EventRecurrence property)</a>
+
+      <ul>
+        <li><a href="api/tasks.html#O365.tasks.Pattern.interval">(O365.tasks.Pattern property)</a>
 </li>
+      </ul></li>
       <li><a href="api/directory.html#O365.directory.Directory.invite_user">invite_user() (O365.directory.Directory method)</a>
 </li>
       <li><a href="api/onedrive.html#O365.drive.DriveItemPermission.invited_by">invited_by (O365.drive.DriveItemPermission attribute)</a>
@@ -1988,10 +2026,10 @@
 </li>
       <li><a href="api/calendar.html#O365.calendar.Event.is_all_day">is_all_day (O365.calendar.Event property)</a>
 </li>
-      <li><a href="api/teams.html#O365.teams.Team.is_archived">is_archived (O365.teams.Team attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/teams.html#O365.teams.Team.is_archived">is_archived (O365.teams.Team attribute)</a>
+</li>
       <li><a href="api/account.html#O365.account.Account.is_authenticated">is_authenticated (O365.account.Account property)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.Event.is_cancelled">is_cancelled (O365.calendar.Event attribute)</a>
@@ -2092,6 +2130,8 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/tasks.html#O365.tasks.WeekIndex.LAST">LAST (O365.tasks.WeekIndex attribute)</a>
+</li>
       <li><a href="api/excel.html#O365.excel.WorkbookSession.last_activity">last_activity (O365.excel.WorkbookSession attribute)</a>
 </li>
       <li><a href="api/teams.html#O365.teams.ChatMessage.last_edited_date">last_edited_date (O365.teams.ChatMessage attribute)</a>
@@ -2382,7 +2422,11 @@
       <li><a href="api/onedrive.html#O365.drive.CopyOperation.monitor_url">monitor_url (O365.drive.CopyOperation attribute)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.EventRecurrence.month">month (O365.calendar.EventRecurrence property)</a>
+
+      <ul>
+        <li><a href="api/tasks.html#O365.tasks.Pattern.month">(O365.tasks.Pattern property)</a>
 </li>
+      </ul></li>
       <li><a href="api/onedrive.html#O365.drive.DriveItem.move">move() (O365.drive.DriveItem method)</a>
 
       <ul>
@@ -2465,10 +2509,10 @@
         <li><a href="api/utils/utils.html#O365.utils.utils.Query.negate">(O365.utils.utils.Query method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/utils/query.html#O365.utils.query.NegateFilter">NegateFilter (class in O365.utils.query)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/utils/utils.html#O365.utils.utils.Query.new">new() (O365.utils.utils.Query method)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.Schedule.new_calendar">new_calendar() (O365.calendar.Schedule method)</a>
@@ -2509,6 +2553,10 @@
 </li>
       <li><a href="api/calendar.html#O365.calendar.Event.no_forwarding">no_forwarding (O365.calendar.Event property)</a>
 </li>
+      <li><a href="api/tasks.html#O365.tasks.Range.no_of_occurrences">no_of_occurrences (O365.tasks.Range property)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.RecurrenceRangeType.NOEND">NOEND (O365.tasks.RecurrenceRangeType attribute)</a>
+</li>
       <li><a href="api/mailbox.html#O365.mailbox.ExternalAudience.NONE">NONE (O365.mailbox.ExternalAudience attribute)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.EventSensitivity.Normal">Normal (O365.calendar.EventSensitivity attribute)</a>
@@ -2522,6 +2570,8 @@
       <li><a href="api/calendar.html#O365.calendar.EventResponse.NotResponded">NotResponded (O365.calendar.EventResponse attribute)</a>
 </li>
       <li><a href="api/excel.html#O365.excel.Range.number_format">number_format (O365.excel.Range property)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.RecurrenceRangeType.NUMBERED">NUMBERED (O365.tasks.RecurrenceRangeType attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -2869,6 +2919,12 @@
         <li><a href="api/excel.html#O365.excel.WorkbookSession.patch">(O365.excel.WorkbookSession method)</a>
 </li>
       </ul></li>
+      <li><a href="api/tasks.html#O365.tasks.Pattern">Pattern (class in O365.tasks)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.Recurrence.pattern">pattern (O365.tasks.Recurrence attribute)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.Pattern.pattern_type">pattern_type (O365.tasks.Pattern property)</a>
+</li>
       <li><a href="api/planner.html#O365.planner.Task.percent_complete">percent_complete (O365.planner.Task attribute)</a>
 </li>
       <li><a href="api/onedrive.html#O365.drive.DriveItemPermission.permission_type">permission_type (O365.drive.DriveItemPermission attribute)</a>
@@ -2891,10 +2947,10 @@
         <li><a href="api/planner.html#O365.planner.Task.plan_id">(O365.planner.Task attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api/planner.html#O365.planner.PlanDetails">PlanDetails (class in O365.planner)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/planner.html#O365.planner.PlanDetails">PlanDetails (class in O365.planner)</a>
+</li>
       <li><a href="api/planner.html#O365.planner.Planner">Planner (class in O365.planner)</a>
 </li>
       <li><a href="api/account.html#O365.account.Account.planner">planner() (O365.account.Account method)</a>
@@ -2990,8 +3046,18 @@
       <li><a href="api/connection.html#O365.connection.Connection.raise_http_errors">raise_http_errors (O365.connection.Connection attribute)</a>
 </li>
       <li><a href="api/excel.html#O365.excel.Range">Range (class in O365.excel)</a>
+
+      <ul>
+        <li><a href="api/tasks.html#O365.tasks.Range">(class in O365.tasks)</a>
 </li>
+      </ul></li>
       <li><a href="api/excel.html#O365.excel.RangeFormat.range">range (O365.excel.RangeFormat attribute)</a>
+
+      <ul>
+        <li><a href="api/tasks.html#O365.tasks.Recurrence.range">(O365.tasks.Recurrence attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/tasks.html#O365.tasks.Range.range_type">range_type (O365.tasks.Range property)</a>
 </li>
       <li><a href="api/excel.html#O365.excel.RangeFormat">RangeFormat (class in O365.excel)</a>
 </li>
@@ -3013,11 +3079,19 @@
 </li>
       <li><a href="api/mailbox.html#O365.mailbox.MailBox.recoverableitemsdeletions_folder">recoverableitemsdeletions_folder() (O365.mailbox.MailBox method)</a>
 </li>
+      <li><a href="api/tasks.html#O365.tasks.Recurrence">Recurrence (class in O365.tasks)</a>
+</li>
       <li><a href="api/calendar.html#O365.calendar.Event.recurrence">recurrence (O365.calendar.Event property)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.EventRecurrence.recurrence_time_zone">recurrence_time_zone (O365.calendar.EventRecurrence property)</a>
 </li>
+      <li><a href="api/tasks.html#O365.tasks.Range.recurrence_timezone">recurrence_timezone (O365.tasks.Range property)</a>
+</li>
       <li><a href="api/calendar.html#O365.calendar.EventRecurrence.recurrence_type">recurrence_type (O365.calendar.EventRecurrence property)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.RecurrencePatternType">RecurrencePatternType (class in O365.tasks)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.RecurrenceRangeType">RecurrenceRangeType (class in O365.tasks)</a>
 </li>
       <li><a href="api/category.html#O365.category.CategoryColor.RED">RED (O365.category.CategoryColor attribute)</a>
 </li>
@@ -3034,6 +3108,10 @@
       <li><a href="api/connection.html#O365.connection.Connection.refresh_token">refresh_token() (O365.connection.Connection method)</a>
 </li>
       <li><a href="api/utils/token.html#O365.utils.token.AWSSecretsBackend.region_name">region_name (O365.utils.token.AWSSecretsBackend attribute)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.RecurrencePatternType.RELATIVEMONTHLY">RELATIVEMONTHLY (O365.tasks.RecurrencePatternType attribute)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.RecurrencePatternType.RELATIVEYEARLY">RELATIVEYEARLY (O365.tasks.RecurrencePatternType attribute)</a>
 </li>
       <li><a href="api/calendar.html#O365.calendar.Event.remind_before_minutes">remind_before_minutes (O365.calendar.Event property)</a>
 </li>
@@ -3055,6 +3133,8 @@
 </li>
       <li><a href="api/utils/utils.html#O365.utils.utils.Query.remove_filter">remove_filter() (O365.utils.utils.Query method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/excel.html#O365.excel.WorkSheet.remove_sheet_name_from_address">remove_sheet_name_from_address() (O365.excel.WorkSheet static method)</a>
 </li>
       <li><a href="api/utils/query.html#O365.utils.query.ChainFilter.render">render() (O365.utils.query.ChainFilter method)</a>
@@ -3085,8 +3165,6 @@
         <li><a href="api/utils/query.html#O365.utils.query.SearchFilter.render">(O365.utils.query.SearchFilter method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/subscriptions.html#O365.subscriptions.Subscriptions.renew_subscription">renew_subscription() (O365.subscriptions.Subscriptions method)</a>
 </li>
       <li><a href="api/message.html#O365.message.Message.reply">reply() (O365.message.Message method)</a>
@@ -3240,6 +3318,8 @@
       <li><a href="api/utils/utils.html#O365.utils.utils.OutlookWellKnowFolderNames.SEARCHFOLDERS">SEARCHFOLDERS (O365.utils.utils.OutlookWellKnowFolderNames attribute)</a>
 </li>
       <li><a href="api/mailbox.html#O365.mailbox.MailBox.searchfolders_folder">searchfolders_folder() (O365.mailbox.MailBox method)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.WeekIndex.SECOND">SECOND (O365.tasks.WeekIndex attribute)</a>
 </li>
       <li><a href="api/utils/token.html#O365.utils.token.BitwardenSecretsManagerBackend.secret">secret (O365.utils.token.BitwardenSecretsManagerBackend attribute)</a>
 </li>
@@ -3416,6 +3496,8 @@
       <ul>
         <li><a href="api/message.html#O365.message.MessageFlag.start_date">(O365.message.MessageFlag property)</a>
 </li>
+        <li><a href="api/tasks.html#O365.tasks.Range.start_date">(O365.tasks.Range property)</a>
+</li>
       </ul></li>
       <li><a href="api/planner.html#O365.planner.Task.start_date_time">start_date_time (O365.planner.Task attribute)</a>
 </li>
@@ -3540,6 +3622,8 @@
       <li><a href="api/calendar.html#O365.calendar.EventResponse.TentativelyAccepted">TentativelyAccepted (O365.calendar.EventResponse attribute)</a>
 </li>
       <li><a href="api/excel.html#O365.excel.Range.text">text (O365.excel.Range attribute)</a>
+</li>
+      <li><a href="api/tasks.html#O365.tasks.WeekIndex.THIRD">THIRD (O365.tasks.WeekIndex attribute)</a>
 </li>
       <li><a href="api/onedrive.html#O365.drive.DriveItem.thumbnails">thumbnails (O365.drive.DriveItem attribute)</a>
 </li>
@@ -3803,8 +3887,12 @@
         <li><a href="api/teams.html#O365.teams.Team.web_url">(O365.teams.Team attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/tasks.html#O365.tasks.WeekIndex">WeekIndex (class in O365.tasks)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/tasks.html#O365.tasks.RecurrencePatternType.WEEKLY">WEEKLY (O365.tasks.RecurrencePatternType attribute)</a>
+</li>
       <li><a href="api/onedrive.html#O365.drive.Image.width">width (O365.drive.Image attribute)</a>
 </li>
       <li><a href="api/excel.html#O365.excel.WorkBook">WorkBook (class in O365.excel)</a>

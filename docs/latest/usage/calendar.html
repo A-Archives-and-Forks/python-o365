@@ -138,14 +138,14 @@
 
 <span class="n">calendar</span> <span class="o">=</span> <span class="n">schedule</span><span class="o">.</span><span class="n">get_default_calendar</span><span class="p">()</span>
 <span class="n">new_event</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">new_event</span><span class="p">()</span>  <span class="c1"># creates a new unsaved event</span>
-<span class="n">new_event</span><span class="o">.</span><span class="n">subject</span> <span class="o">=</span> <span class="s1">&#39;Recruit George Best!&#39;</span>
-<span class="n">new_event</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="s1">&#39;England&#39;</span>
+<span class="n">new_event</span><span class="o">.</span><span class="n">subject</span> <span class="o">=</span> <span class="s1">'Recruit George Best!'</span>
+<span class="n">new_event</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="s1">'England'</span>
 
 <span class="c1"># naive datetimes will automatically be converted to timezone aware datetime</span>
 <span class="c1">#  objects using the local timezone detected or the protocol provided timezone</span>
 
 <span class="n">new_event</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
-<span class="c1"># so new_event.start becomes: datetime.datetime(2018, 9, 5, 19, 45, tzinfo=&lt;DstTzInfo &#39;Europe/Paris&#39; CEST+2:00:00 DST&gt;)</span>
+<span class="c1"># so new_event.start becomes: datetime.datetime(2018, 9, 5, 19, 45, tzinfo=&lt;DstTzInfo 'Europe/Paris' CEST+2:00:00 DST&gt;)</span>
 
 <span class="n">new_event</span><span class="o">.</span><span class="n">recurrence</span><span class="o">.</span><span class="n">set_daily</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">new_event</span><span class="o">.</span><span class="n">remind_before_minutes</span> <span class="o">=</span> <span class="mi">45</span>
@@ -154,15 +154,15 @@
 </pre></div>
 </div>
 <p>Working with Calendar instances:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">calendar</span> <span class="o">=</span> <span class="n">schedule</span><span class="o">.</span><span class="n">get_calendar</span><span class="p">(</span><span class="n">calendar_name</span><span class="o">=</span><span class="s1">&#39;Birthdays&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">calendar</span> <span class="o">=</span> <span class="n">schedule</span><span class="o">.</span><span class="n">get_calendar</span><span class="p">(</span><span class="n">calendar_name</span><span class="o">=</span><span class="s1">'Birthdays'</span><span class="p">)</span>
 
 <span class="n">builder</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">new_query</span><span class="p">()</span>
-<span class="n">calendar</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Football players birthdays&#39;</span>
+<span class="n">calendar</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">'Football players birthdays'</span>
 <span class="n">calendar</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 
 
-<span class="n">start_q</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">greater_equal</span><span class="p">(</span><span class="s1">&#39;start&#39;</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
-<span class="n">end_q</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">less_equal</span><span class="p">(</span><span class="s1">&#39;start&#39;</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">24</span><span class="p">))</span>
+<span class="n">start_q</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">greater_equal</span><span class="p">(</span><span class="s1">'start'</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">end_q</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">less_equal</span><span class="p">(</span><span class="s1">'start'</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2018</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">24</span><span class="p">))</span>
 
 <span class="n">birthdays</span> <span class="o">=</span> <span class="n">calendar</span><span class="o">.</span><span class="n">get_events</span><span class="p">(</span>
     <span class="n">include_recurring</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># include_recurring=True will include repeated events on the result set.</span>
@@ -171,11 +171,11 @@
     <span class="p">)</span>
 
 <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">birthdays</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">subject</span> <span class="o">==</span> <span class="s1">&#39;George Best Birthday&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">subject</span> <span class="o">==</span> <span class="s1">'George Best Birthday'</span><span class="p">:</span>
         <span class="c1"># He died in 2005... but we celebrate anyway!</span>
-        <span class="n">event</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="s2">&quot;I&#39;ll attend!&quot;</span><span class="p">)</span>  <span class="c1"># send a response accepting</span>
+        <span class="n">event</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="s2">"I'll attend!"</span><span class="p">)</span>  <span class="c1"># send a response accepting</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">event</span><span class="o">.</span><span class="n">decline</span><span class="p">(</span><span class="s2">&quot;No way I&#39;m coming, I&#39;ll be in Spain&quot;</span><span class="p">,</span> <span class="n">send_response</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># decline the event but don&#39;t send a response to the organizer</span>
+        <span class="n">event</span><span class="o">.</span><span class="n">decline</span><span class="p">(</span><span class="s2">"No way I'm coming, I'll be in Spain"</span><span class="p">,</span> <span class="n">send_response</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># decline the event but don't send a response to the organizer</span>
 </pre></div>
 </div>
 <p><strong>Notes regarding Calendars and Events</strong>:</p>

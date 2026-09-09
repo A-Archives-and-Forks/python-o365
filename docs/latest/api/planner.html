@@ -220,14 +220,14 @@
 </dd>
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">assignments</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="s2">&quot;ca2a1df2-e36b-4987-9f6b-0ea462f4eb47&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-      <span class="s2">&quot;4e98f8f1-bb03-4015-b8e0-19bb370949d8&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="s2">&quot;@odata.type&quot;</span><span class="p">:</span> <span class="s2">&quot;microsoft.graph.plannerAssignment&quot;</span><span class="p">,</span>
-          <span class="s2">&quot;orderHint&quot;</span><span class="p">:</span> <span class="s2">&quot;String&quot;</span>
+      <span class="s2">"ca2a1df2-e36b-4987-9f6b-0ea462f4eb47"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+      <span class="s2">"4e98f8f1-bb03-4015-b8e0-19bb370949d8"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"@odata.type"</span><span class="p">:</span> <span class="s2">"microsoft.graph.plannerAssignment"</span><span class="p">,</span>
+          <span class="s2">"orderHint"</span><span class="p">:</span> <span class="s2">"String"</span>
         <span class="p">}</span>
     <span class="p">}</span>
-<span class="k">if</span> <span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="n">null</span> <span class="o">-&gt;</span> <span class="n">task</span> <span class="ow">is</span> <span class="n">unassigned</span> <span class="n">to</span> <span class="n">user</span><span class="o">.</span>
-<span class="k">if</span> <span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">-&gt;</span> <span class="n">task</span> <span class="ow">is</span> <span class="n">assigned</span> <span class="n">to</span> <span class="n">user</span>
+<span class="k">if</span> <span class="s2">"user_id"</span><span class="p">:</span> <span class="n">null</span> <span class="o">-&gt;</span> <span class="n">task</span> <span class="ow">is</span> <span class="n">unassigned</span> <span class="n">to</span> <span class="n">user</span><span class="o">.</span>
+<span class="k">if</span> <span class="s2">"user_id"</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">-&gt;</span> <span class="n">task</span> <span class="ow">is</span> <span class="n">assigned</span> <span class="n">to</span> <span class="n">user</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -861,10 +861,10 @@ The possible values are: automatic, noPreview, checklist, description, reference
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">checklist</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;string GUID&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;isChecked&quot;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
-    <span class="s2">&quot;orderHint&quot;</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span>
-    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">string</span>
+  <span class="s2">"string GUID"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"isChecked"</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="s2">"orderHint"</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="n">string</span>
   <span class="p">}</span>
 <span class="p">}</span> <span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
 </pre></div>
@@ -881,10 +881,10 @@ The possible values are: automatic, noPreview, checklist, description, reference
 </dd>
 </dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">references</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s2">&quot;URL of the resource&quot;</span> <span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;alias&quot;</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span>
-    <span class="s2">&quot;previewPriority&quot;</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="c1">#same as orderHint</span>
-    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="c1">#e.g. PowerPoint, Excel, Word, Pdf...</span>
+  <span class="s2">"URL of the resource"</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"alias"</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span>
+    <span class="s2">"previewPriority"</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="c1">#same as orderHint</span>
+    <span class="s2">"type"</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="c1">#e.g. PowerPoint, Excel, Word, Pdf...</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>

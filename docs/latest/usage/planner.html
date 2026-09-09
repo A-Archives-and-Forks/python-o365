@@ -124,10 +124,10 @@
 <p>Assuming an authenticated account and a previously created group, create a Plan instance.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create a plan instance</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
-<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">&#39;app_id&#39;</span><span class="p">,</span> <span class="s1">&#39;app_pw&#39;</span><span class="p">))</span>
+<span class="n">account</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">'app_id'</span><span class="p">,</span> <span class="s1">'app_pw'</span><span class="p">))</span>
 <span class="n">planner</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="n">planner</span><span class="p">()</span>
 <span class="n">plan</span> <span class="o">=</span> <span class="n">planner</span><span class="o">.</span><span class="n">create_plan</span><span class="p">(</span>
-    <span class="n">owner</span><span class="o">=</span><span class="s2">&quot;group_object_id&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Test Plan&quot;</span>
+    <span class="n">owner</span><span class="o">=</span><span class="s2">"group_object_id"</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">"Test Plan"</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -137,24 +137,24 @@
 </div>
 <p>Then to create a bucket within a plan.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create a bucket instance in a plan</span>
-<span class="n">bucket</span> <span class="o">=</span> <span class="n">plan</span><span class="o">.</span><span class="n">create_bucket</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Test Bucket&quot;</span><span class="p">)</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="n">plan</span><span class="o">.</span><span class="n">create_bucket</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">"Test Bucket"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Common commands for <code class="code docutils literal notranslate"><span class="pre">bucket</span></code> include <code class="code docutils literal notranslate"><span class="pre">.list_tasks()</span></code> and <code class="code docutils literal notranslate"><span class="pre">.delete()</span></code>.</p>
 <p>Then to create a task, assign it to a user, set it to 50% completed and add a description.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create a task in a bucket</span>
 <span class="n">assignments</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;user_object_id: {</span>
-        <span class="s2">&quot;@odata.type&quot;</span><span class="p">:</span> <span class="s2">&quot;microsoft.graph.plannerAssignment&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;orderHint&quot;</span><span class="p">:</span> <span class="s2">&quot;1 !&quot;</span><span class="p">,</span>
+    <span class="s2">"user_object_id: {</span>
+        <span class="s2">"@odata.type"</span><span class="p">:</span> <span class="s2">"microsoft.graph.plannerAssignment"</span><span class="p">,</span>
+        <span class="s2">"orderHint"</span><span class="p">:</span> <span class="s2">"1 !"</span><span class="p">,</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="n">task</span> <span class="o">=</span> <span class="n">bucket</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Test Task&quot;</span><span class="p">,</span> <span class="n">assignments</span><span class="o">=</span><span class="n">assignments</span><span class="p">)</span>
+<span class="n">task</span> <span class="o">=</span> <span class="n">bucket</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">"Test Task"</span><span class="p">,</span> <span class="n">assignments</span><span class="o">=</span><span class="n">assignments</span><span class="p">)</span>
 
 <span class="n">task</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">percent_complete</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 
 <span class="n">task_details</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">get_details</span><span class="p">()</span>
-<span class="n">task_details</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Test Description&quot;</span><span class="p">)</span>
+<span class="n">task_details</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">"Test Description"</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Common commands for <code class="code docutils literal notranslate"><span class="pre">task</span></code> include <code class="code docutils literal notranslate"><span class="pre">.get_details()</span></code>, <code class="code docutils literal notranslate"><span class="pre">.update()</span></code> and <code class="code docutils literal notranslate"><span class="pre">.delete()</span></code>.</p>

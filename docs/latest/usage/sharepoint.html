@@ -136,8 +136,8 @@
 to a Sharepoint site.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create Sharepoint instance and connect to a site</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">O365</span><span class="w"> </span><span class="kn">import</span> <span class="n">Account</span>
-<span class="n">acct</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">&#39;app_id&#39;</span><span class="p">,</span> <span class="s1">&#39;app_pw&#39;</span><span class="p">))</span>
-<span class="n">sp_site</span> <span class="o">=</span> <span class="n">acct</span><span class="o">.</span><span class="n">sharepoint</span><span class="p">()</span><span class="o">.</span><span class="n">get_site</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">,</span> <span class="s1">&#39;path/tosite&#39;</span><span class="p">)</span>
+<span class="n">acct</span> <span class="o">=</span> <span class="n">Account</span><span class="p">((</span><span class="s1">'app_id'</span><span class="p">,</span> <span class="s1">'app_pw'</span><span class="p">))</span>
+<span class="n">sp_site</span> <span class="o">=</span> <span class="n">acct</span><span class="o">.</span><span class="n">sharepoint</span><span class="p">()</span><span class="o">.</span><span class="n">get_site</span><span class="p">(</span><span class="s1">'root'</span><span class="p">,</span> <span class="s1">'path/tosite'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Common commands for <code class="code docutils literal notranslate"><span class="pre">sp_site</span></code> include <code class="code docutils literal notranslate"><span class="pre">.display_name</span></code>,
@@ -165,7 +165,7 @@ the requested list as a <code class="code docutils literal notranslate"><span cl
 <span class="n">sp_site_lists</span> <span class="o">=</span> <span class="n">sp_site</span><span class="o">.</span><span class="n">get_lists</span><span class="p">()</span>
 
 <span class="c1">#Return a specific list by name</span>
-<span class="n">sp_list</span> <span class="o">=</span> <span class="n">sp_site</span><span class="o">.</span><span class="n">get_list_by_name</span><span class="p">(</span><span class="s1">&#39;list_name&#39;</span><span class="p">)</span>
+<span class="n">sp_list</span> <span class="o">=</span> <span class="n">sp_site</span><span class="o">.</span><span class="n">get_list_by_name</span><span class="p">(</span><span class="s1">'list_name'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Commmon functions on a Sharepoint list include <code class="code docutils literal notranslate"><span class="pre">.get_list_columns()</span></code>,
@@ -190,8 +190,8 @@ will be filled with a blank.  The <cite>column_name</cite> must be the internal 
 of the sharepoint list.  <code class="code docutils literal notranslate"><span class="pre">.column_name_cw</span></code> of a sharepoint list will provide a
 dictionary of <code class="code docutils literal notranslate"><span class="pre">{'Display</span> <span class="pre">Name':</span> <span class="pre">'Internal</span> <span class="pre">Name'}</span></code> if needed.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create a new sharepoint list item</span>
-<span class="n">new_item</span> <span class="o">=</span> <span class="n">sp_list</span><span class="o">.</span><span class="n">create_list_item</span><span class="p">({</span><span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="s1">&#39;New Data Col 1&#39;</span><span class="p">,</span>
-                                     <span class="s1">&#39;col2&#39;</span><span class="p">:</span> <span class="s1">&#39;New Data Col 2&#39;</span><span class="p">})</span>
+<span class="n">new_item</span> <span class="o">=</span> <span class="n">sp_list</span><span class="o">.</span><span class="n">create_list_item</span><span class="p">({</span><span class="s1">'col1'</span><span class="p">:</span> <span class="s1">'New Data Col 1'</span><span class="p">,</span>
+                                     <span class="s1">'col2'</span><span class="p">:</span> <span class="s1">'New Data Col 2'</span><span class="p">})</span>
 
 <span class="c1">#Delete the item just created</span>
 <span class="n">sp_list</span><span class="o">.</span><span class="n">delete_list_item</span><span class="p">(</span><span class="n">new_item</span><span class="o">.</span><span class="n">object_id</span><span class="p">)</span>  <span class="c1">#Pass the item ID to be deleted</span>
@@ -203,8 +203,8 @@ dictionary of <code class="code docutils literal notranslate"><span class="pre">
 Sharepoint list item.  The <cite>column_name</cite> keys of the dictionary must again refer
 to the internal column name, otherwise an error will occur.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Update a Sharepoint List item</span>
-<span class="n">new_item</span><span class="o">.</span><span class="n">update_fields</span><span class="p">({</span><span class="s1">&#39;col1&#39;</span><span class="p">:</span> <span class="s1">&#39;Updated Data Col1&#39;</span><span class="p">,</span>
-                        <span class="s1">&#39;col2&#39;</span><span class="p">:</span> <span class="s1">&#39;Updated Data Col2&#39;</span><span class="p">})</span>
+<span class="n">new_item</span><span class="o">.</span><span class="n">update_fields</span><span class="p">({</span><span class="s1">'col1'</span><span class="p">:</span> <span class="s1">'Updated Data Col1'</span><span class="p">,</span>
+                        <span class="s1">'col2'</span><span class="p">:</span> <span class="s1">'Updated Data Col2'</span><span class="p">})</span>
 
 <span class="c1">#Once done updating a sharepoint item save changes to the cloud</span>
 <span class="n">new_item</span><span class="o">.</span><span class="n">save_updates</span><span class="p">()</span> <span class="c1">#Returns True if successful</span>

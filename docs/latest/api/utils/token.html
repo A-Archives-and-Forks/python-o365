@@ -445,7 +445,7 @@ If the refresh token is present, then the expiration datetime is extended by 3 m
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="O365.utils.token.BaseTokenBackend.serializer">
-<span class="sig-name descname"><span class="pre">serializer</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'/opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/json/__init__.py'&gt;</span></span><a class="headerlink" href="#O365.utils.token.BaseTokenBackend.serializer" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">serializer</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;module</span> <span class="pre">'json'</span> <span class="pre">from</span> <span class="pre">'/opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/json/__init__.py'&gt;</span></span><a class="headerlink" href="#O365.utils.token.BaseTokenBackend.serializer" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -532,7 +532,7 @@ model below into your Django application.</p>
     <span class="n">updated_at</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">auto_now</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Token for </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">token</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;client_id&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;unknown&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">"Token for </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">token</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'client_id'</span><span class="p">,</span><span class="w"> </span><span class="s1">'unknown'</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
 </pre></div>
 </div>
 <p>Example usage:</p>
