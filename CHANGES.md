@@ -3,6 +3,10 @@
 Almost every release features a lot of bugfixes but those are not listed here.
 
 
+## Versions 2.1.10 (2026-09-09)
+
+- Tasks: Add recurrence to task (Thanks @RogerSelwyn)
+
 ## Versions 2.1.9 (2026-01-30)
 
 - Message: You can now delay the delivery of a message (Thanks @yeyeric)
